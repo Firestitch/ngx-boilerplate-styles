@@ -1,0 +1,16 @@
+{
+  "name": "fs-boilerplate-styles", 
+  "description": "",
+  "main": [
+    
+  ],
+  "authors": [
+    "Firestitch Inc."
+  ],
+  "license": "MIT",
+  "ignore": [
+    "src",
+    ".gitignore"
+  ],
+  "private": false
+}
