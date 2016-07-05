@@ -12,6 +12,5 @@ project-files
 *.sublime-workspace
 /app/config
 /app/iconfont
-/dist
 
 app/scripts/services/mocks/
