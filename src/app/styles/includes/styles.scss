@@ -1,3 +1,9 @@
+// ""!default"" - guarded assignment. In this case, the constant is only set if it does not already have a value
+$color-success: black !default;
+$color-warning: #FFA000 !default;
+$color-primary: #2196F3 !default;
+$color-danger: #E53935 !default;
+$color-disabled: #EAEAEA !default;
 
 body, input {
     font-size: 15px;
@@ -545,76 +551,11 @@ md-input-container {
         }
     }
 
-    .hint {
-        color: rgba(0, 0, 0, 0.87);
-        font-size: 12px;
-        line-height: 12px;
-
-        position: absolute;
-        bottom: 7px;
-        overflow: hidden;
-    }
-
-    &.md-block {
-        .hint {
-            bottom: 25px;
-        }
-    }
-
-    ng-messages,
-    [ng-messages] {
-        font-size: 12px;
-        line-height: 12px;
-        color: rgb(221, 44, 0);
-
-        position: absolute;
-        bottom: 7px;
-        left: 0;
-        padding-left: 2px;
-    }
-
-    .hint ~ ng-messages,
-    .hint ~ [ng-messages] {
-        bottom: -10px;
-    }
-
-    &.md-block {
-        ng-messages,
-        [ng-messages] {
-            bottom: 25px;
-        }
-
-        .hint ~ ng-messages,
-        .hint ~ [ng-messages] {
-            bottom: 8px;
-        }
-    }
-
-    form[fs-validate] & ng-message {
-        font-size: 12px;
-        line-height: 12px;
-    }
-
-    ng-message,
-    data-ng-message,
-    x-ng-message,
-    [ng-message],
-    [data-ng-message],
-    [x-ng-message],
-    [ng-message-exp],
-    [data-ng-message-exp],
-    [x-ng-message-exp] {
-        font-size: 12px;
-        line-height: 12px;
-        padding-top: 0;
-    }
-
     .md-char-counter {
         font-size: 12px;
         line-height: 12px;
         padding-top: 7px;
     }
-
 
     ng-messages .md-char-counter,
     [ng-messages] .md-char-counter,
@@ -667,6 +608,82 @@ md-input-container {
                 }
             }
         }
+    }
+}
+
+md-input-container,
+md-datepicker-container {
+
+    .hint {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 12px;
+        line-height: 12px;
+
+        padding-left: 2px;
+        padding-top: 0;
+
+        position: absolute;
+        bottom: 7px;
+        overflow: hidden;
+    }
+
+    ng-messages,
+    [ng-messages] {
+        color: rgb(221, 44, 0);
+        font-size: 12px;
+        line-height: 12px;
+
+        padding-left: 2px;
+        padding-top: 0;
+
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+    }
+
+    .hint ~ ng-messages,
+    .hint ~ [ng-messages] {
+        bottom: -10px;
+    }
+
+    &.md-block {
+        .hint {
+            bottom: 25px;
+        }
+
+        ng-messages,
+        [ng-messages] {
+            bottom: 25px;
+        }
+
+        .hint ~ ng-messages,
+        .hint ~ [ng-messages] {
+            bottom: 8px;
+        }
+    }
+
+    ng-message,
+    data-ng-message,
+    x-ng-message,
+    [ng-message],
+    [data-ng-message],
+    [x-ng-message],
+    [ng-message-exp],
+    [data-ng-message-exp],
+    [x-ng-message-exp] {
+        display: block;
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 0;
+        padding-left: 2px;
+    }
+
+    form[fs-validate] & ng-message {
+        font-size: 12px;
+        line-height: 12px;
+
+        padding-top: 0px;
+        padding-left: 2px;
     }
 }
 
