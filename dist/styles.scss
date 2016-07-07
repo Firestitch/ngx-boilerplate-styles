@@ -1,3 +1,706 @@
-body {
-	background: blue;
+
+body, input {
+    font-size: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.md-button {
+
+	&:not(.md-mini) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&.md-button-success {
+
+		&:active, &:focus, & {
+		    background: $color-success;
+		    color: #fff;
+		}
+
+		&:hover {
+		    background: $color-success;
+		    opacity: .4;
+		}
+	}
+
+	&.md-button-warning {
+
+		&:active, &:focus, & {
+		    background: $color-warning;
+		    color: #fff;
+		}
+
+		&:hover {
+		    background: $color-warning;
+		    opacity: .4;
+		}
+	}
+
+	&.md-button-primary {
+
+		&:active, &:focus, & {
+		    background: $color-primary;
+		    color: #fff;
+		}
+
+		&:hover {
+		    background: $color-primary;
+		    opacity: .4;
+		}
+	}
+
+	&.md-button-danger {
+
+		&:active, &:focus, & {
+		    background: $color-danger;
+		    color: #fff;
+		}
+
+		&:hover {
+		    background: $color-danger;
+		    opacity: .4;
+		}
+	}
+}
+
+.md-button.disabled,
+.md-button[disabled],
+.md-button.disabled:hover,
+.md-button[disabled]:hover {
+    background: $color-disabled;
+    color: #A8A8A8;
+    opacity: 1;
+}
+
+.md-dialog-container {
+    position: fixed;
+}
+
+md-dialog-actions .md-button.md-button-primary {
+
+	background: transparent;
+	box-shadow: none;
+
+	&:active, &:focus, & {
+	    background: transparent;
+	    color: $color-primary;
+	}
+
+	&:hover {
+	    background: rgba(158,158,158,0.2);
+	    opacity: 1;
+	}
+}
+
+.md-datepicker-calendar-pane.md-pane-open {
+    /*display: none;*/
+
+    .md-datepicker-input-mask {
+        display: none;
+
+        .md-datepicker-input-mask-opaque {
+
+        }
+    }
+}
+
+md-datepicker-container {
+    font-size: 15px;
+    /*display: inline-block;*/
+    position: relative;
+
+    padding: 2px;
+    margin: 18px 0;
+    vertical-align: middle;
+    min-height: 54px;
+
+    &[flex],
+    &[class~="flex"]
+    &[class|="flex"] {
+        // because flex changes its display from block to flex and its box-sizing from content-box to border-box
+        min-height: 58px;
+    }
+
+    &.md-block {
+        display: block;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+
+        md-datepicker {
+            padding-right: 0;
+            margin-right: 0;
+        }
+
+        .md-datepicker-input-container {
+            display: block;
+        }
+
+        .md-datepicker-input {
+            min-width: 0;
+            max-width: none;
+            width: 100%;
+        }
+    }
+
+    md-datepicker {
+        display: block;
+
+        &.md-datepicker-open {
+            .md-datepicker-input-container {
+                margin-left: 0;
+                border-bottom: 1px solid;
+                border-bottom-color: rgba(0, 0, 0, 0.11);
+            }
+
+            .md-datepicker-input {
+                margin-left: 0;
+                height: auto;
+            }
+        }
+    }
+
+    .md-datepicker-input-container {
+        box-sizing: border-box;
+        height: 31px;
+
+    	padding-bottom: 0;
+    	margin-left: 0;
+        border-bottom-color: rgba(0, 0, 0, 0.11);
+    }
+
+    .md-datepicker-input {
+        font-size: 15px;
+        color: rgba(0,0,0,0.87);
+        order: 2;
+        margin-top: 1px;
+        margin-bottom: -1px;
+
+        padding: 0 2px;
+
+        line-height: 26px;
+        height: 30px;
+
+        -ms-flex-preferred-size: 26px;
+        outline-offset: 0;
+
+        &:focus {
+            outline: none;
+        }
+        &:invalid {
+            outline: none;
+            box-shadow: none;
+        }
+        &.md-no-flex {
+            flex: none !important;
+        }
+    }
+
+    .md-button {
+
+        &:not(.md-mini) {
+        }
+
+        &.md-icon-button {
+
+            &.md-datepicker-triangle-button {
+                height: 20px;
+                width: 20px;
+                min-height: 20px;
+
+                padding: 0;
+                margin: 14px 8px 0 0;
+
+                &:not(.md-mini) {
+
+                }
+            }
+        }
+    }
+
+    .md-datepicker-button {
+    	display: none;
+    }
+}
+
+md-datepicker-container {
+
+    label {
+        line-height: 21px;
+
+		position: absolute;
+	    bottom: 100%;
+	    left: 0;
+	    right: auto;
+	    padding-left: 6px;
+
+        transform: translate3d(0, 6px, 0) scale(0.75);
+        transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+        transform-origin: left top;
+
+	    color: rgba(0, 0, 0, 0.54);
+        pointer-events: none;
+
+        md-icon,
+        md-icon.material-icons {
+            vertical-align: text-bottom;
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    &[class*="ng-"] {
+
+        label {
+            order: 1;
+            z-index: 1;
+            padding-left: 2px;
+
+            transform: translate3d(0, 28px, 0) scale(1);
+            transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+
+            color: rgba(0, 0, 0, 0.26);
+        }
+    }
+}
+
+md-datepicker-container {
+    // ng-not-empty - denotes 'the view contains a non-empty value'
+    // ng-empty     - denotes 'the view does not contain a value or the value is deemed "empty", as defined'
+    &.md-datepicker-focused,
+    &.md-input-has-placeholder,
+    &.ng-invalid-valid-add,
+    &.ng-not-empty-add,
+    &.ng-not-empty,
+    &.ng-empty.ng-invalid-valid {
+
+        label {
+            padding-left: 6px;
+            margin-top: 0;
+            transform: translate3d(0, 6px, 0) scale(0.75);
+        }
+    }
+
+    // If we have an existing value; don't animate the transform as it happens on page load and
+    // causes erratic/unnecessary animation
+    &.ng-not-empty {
+
+        label {
+            color: rgba(0, 0, 0, 0.54);
+            transition: none;
+        }
+
+        &.md-datepicker-open {
+
+            label {
+                color: rgba(0, 0, 0, 0.26);
+                transform: translate3d(0, 28px, 0) scale(1);
+                transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+                transform-origin: left top;
+            }
+        }
+    }
+
+    &.md-datepicker-focused {
+
+        &.ng-empty {
+            label {
+                color: #106CC8;
+
+                md-icon.material-icons {
+                    color: #106CC8;
+                }
+            }
+
+            &.ng-invalid {
+                /*&:not(.ng-untouched),*/
+                &.ng-touched,
+                &.ng-invalid-valid  {
+                    label {
+                        color: rgb(221, 44, 0);
+
+                        md-icon.material-icons {
+                            color: rgba(0, 0, 0, 0.54);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.ng-not-empty.ng-invalid {
+            label {
+                color: rgb(221, 44, 0);
+            }
+        }
+    }
+}
+
+md-checkbox-container,
+md-radiobutton-container {
+
+	margin-bottom: 29px;
+	margin-top: 0px;
+
+	label {
+	    transform-origin: left;
+	    -webkit-transform: scale(0.75);
+	    transform: scale(0.75);
+	    color: rgba(0,0,0,0.54);
+	    margin-bottom: 1.5px;
+	    display: block;
+	}
+}
+
+
+fs-heading {
+    color: #272727;
+    font-size: 20px;
+    height: 36px;
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+
+fs-heading fs-heading-actions {
+    position: absolute;
+    right: 0;
+}
+
+fs-heading fs-heading-actions .md-button {
+    margin: 0;
+}
+
+md-dialog {
+	max-width: 1100px;
+}
+
+md-select:not([disabled]):focus .md-select-value {
+	padding-bottom: 2px;
+}
+
+hr {
+    border: 1px solid #D0D0D0;
+    border-bottom: 0;
+}
+
+md-input-container {
+    box-sizing: content-box;
+    margin: 18px 0;
+    padding: 2px;
+    min-height: 54px;
+    vertical-align: middle;
+
+    &[flex],
+    &[class~="flex"]
+    &[class|="flex"] {
+        // because flex changes its display from block to flex and its box-sizing from content-box to border-box
+        min-height: 58px;
+    }
+
+    &.md-block {
+        display: block;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    // icon offset should have higher priority as normal label
+    &.md-has-icon {
+        padding-left: 2px;
+
+        > label {
+            left: 0px;
+        }
+    }
+
+    &.md-icon-float {
+
+    }
+
+    &.md-icon-left {
+        padding-left: 28px;
+        padding-right: 2px;
+
+        > label {
+            left: 27px;
+        }
+    }
+
+    &.md-icon-right {
+        padding-left: 2px;
+    }
+
+    > md-icon {
+        color: rgba(0,0,0,0.57);
+    }
+
+    textarea.md-input {
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 4px;
+        height: 30px;
+        min-height: 30px;
+    }
+
+    /*
+     * The .md-input class is added to the input/textarea
+     */
+    .md-input {
+        margin-top: 1px;
+        line-height: 26px;
+        height: 30px;
+        -ms-flex-preferred-size: 26px;
+
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+
+        &:focus {
+        }
+
+        &:invalid {
+        }
+
+        &.md-no-flex {
+        }
+    }
+
+    .md-input[disabled],
+    [disabled] & .md-input {
+       margin-top: 1px;
+    }
+
+    label, .md-placeholder {
+        color: rgba(0, 0, 0, 0.26);
+    }
+
+    label {
+        line-height: 21px;
+
+        md-icon,
+        md-icon.material-icons {
+            vertical-align: text-bottom;
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        padding-left: 2px;
+
+        &:not(.md-no-float) {
+        }
+
+        &:not(.md-container-ignore) {
+        }
+
+        &:not(.md-no-float):not(.md-container-ignore) {
+            padding-left: 2px;
+        }
+    }
+
+    .md-placeholder {
+    }
+
+
+    &.md-input-focused,
+    &.md-input-has-value,
+    &.md-input-has-placeholder{
+        label, label:not(.md-no-float):not(.md-container-ignore) {
+            padding-left: 6px;
+            margin-top: 0;
+        }
+    }
+
+
+    &:not(.md-input-invalid) {
+
+        &.md-input-has-value {
+            label,
+            md-icon {
+                color: rgba(0, 0, 0, 0.54);
+            }
+        }
+
+        &.md-input-focused {
+            label,
+            md-icon,
+            &.md-accent label,
+            &.md-warn label {
+
+            }
+        }
+    }
+
+
+    &.md-input-invalid {
+        label,
+        &.md-input-focused label {
+
+        }
+    }
+
+    .hint {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 12px;
+        line-height: 12px;
+
+        position: absolute;
+        bottom: 7px;
+        overflow: hidden;
+    }
+
+    &.md-block {
+        .hint {
+            bottom: 25px;
+        }
+    }
+
+    ng-messages,
+    [ng-messages] {
+        font-size: 12px;
+        line-height: 12px;
+        color: rgb(221, 44, 0);
+
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        padding-left: 2px;
+    }
+
+    .hint ~ ng-messages,
+    .hint ~ [ng-messages] {
+        bottom: -10px;
+    }
+
+    &.md-block {
+        ng-messages,
+        [ng-messages] {
+            bottom: 25px;
+        }
+
+        .hint ~ ng-messages,
+        .hint ~ [ng-messages] {
+            bottom: 8px;
+        }
+    }
+
+    form[fs-validate] & ng-message {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    ng-message,
+    data-ng-message,
+    x-ng-message,
+    [ng-message],
+    [data-ng-message],
+    [x-ng-message],
+    [ng-message-exp],
+    [data-ng-message-exp],
+    [x-ng-message-exp] {
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 0;
+    }
+
+    .md-char-counter {
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 7px;
+    }
+
+
+    ng-messages .md-char-counter,
+    [ng-messages] .md-char-counter,
+    ng-message .md-char-counter,
+    data-ng-message .md-char-counter,
+    x-ng-message .md-char-counter,
+    [ng-message] .md-char-counter,
+    [data-ng-message] .md-char-counter,
+    [x-ng-message] .md-char-counter,
+    [ng-message-exp] .md-char-counter,
+    [data-ng-message-exp] .md-char-counter,
+    [x-ng-message-exp] .md-char-counter {
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 7px;
+    }
+
+
+    input, md-select, textarea {
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &.md-block {
+        md-select {
+        }
+    }
+
+    md-select {
+
+        .md-select-value {
+            padding-top: 2px;
+            padding-bottom: 2px;
+
+            > * {
+                margin-bottom: 3px;
+            }
+
+            &.md-select-placeholder {
+
+            }
+
+            .md-select-icon {
+                width: 15px;
+                margin-top: 2px;
+                margin-right: 0;
+                margin-bottom: 3px;
+
+                &:after {
+
+                }
+            }
+        }
+    }
+}
+
+md-checkbox-container {
+
+}
+
+md-radiobutton-container {
+
+}
+
+md-autocomplete-container {
+    md-autocomplete-wrap {
+        border-bottom: 1px solid rgb(225, 225, 225);
+        box-shadow: none !important;
+    }
+
+    input {
+        padding: 0 4px !important;
+    }
+}
+
+
+.md-open-menu-container,
+.md-select-menu-container {
+    transition-duration: 0ms !important;
+}
+
+.md-open-menu-container > md-menu-content > *,
+.md-select-menu-container md-select-menu > * {
+    transition-duration: 10ms !important;
+    transition-delay: 5ms !important;
+}
+
+md-toast {
+    position: fixed;
 }
