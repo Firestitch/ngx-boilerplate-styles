@@ -1,0 +1,8 @@
+/*
+	This is a dummy file and used to ignore errors on the bower build. Include the Boilerplate Styles by placing the import line below in styles/global/bower.scss
+	@import "../../bower_components/fs-boilerplate-styles/dist/styles.scss";
+
+	or for specific material version simple include the correct versioned scss file
+
+	@import "../../bower_components/fs-boilerplate-styles/dist/material-1.0.9.scss";
+*/
