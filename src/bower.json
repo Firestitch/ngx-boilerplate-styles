@@ -16,6 +16,7 @@
     "angular-loading-bar": "0.8.0",
     "fs-angular-address": "latest",
     "fs-angular-alert": "latest",
+    "fs-angular-api": "latest",
     "fs-angular-bodyroute": "latest",
     "fs-angular-lister": "latest",
     "fs-angular-modal": "latest",

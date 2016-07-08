@@ -8,6 +8,7 @@ angular
     'ui.router',
     'fs-angular-modal',
     'fs-angular-alert',
+    'fs-angular-api',
     'fs-angular-bodyroute',
     'fs-angular-lister',
     'fs-angular-tabnav',
@@ -43,7 +44,7 @@ angular
 
     .state('default.patterns', {
         url: '/patterns/:pattern/:param1/:param2', 
-        templateUrl: 'views/patterns/index.html',
+        templateUrl: 'views/patterns/patterns.html',
         controller: 'PatternsCtrl',
         params: {
             pattern: {

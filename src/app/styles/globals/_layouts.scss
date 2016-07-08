@@ -1,23 +1,48 @@
 //import the various styles in order of specificity
 //@import "layoutstylesheet";
-
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+html, body {
+  height: 100%;
 }
 
-.cf:after {
-    clear: both;
+.main-ui-view {
+  height: 100%;
+  position: relative;
+  top: 60px;
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 80px;
-    padding-top: 20px;
-    min-width: 943px;
-    height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 80px;
+  padding-top: 20px;
+  min-width: 943px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+
+  }
+
+  .nav-container {
+
+  }
+}
+
+md-toolbar .md-toolbar-tools {
+  position: relative;
 }
