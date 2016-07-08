@@ -1,0 +1,372 @@
+<script type="text/ng-template" id="views/pattern/include.html">
+<div ng-controller="PatternSpecExampleCtrl">
+    <form fs-validate id="form-spec-example" ng-class="{ 'container-background': background }">
+
+        <fs-heading>Input Elements</fs-heading>
+        <div layout="column">
+            <div layout="row">
+                <div flex="10">
+                </div>
+                <div flex layout="row" layout-align="space-around center">
+                    <div>Unpopulated</div>
+                    <div>Populated</div>
+                    <div>Invalid</div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Unfocused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container ng-init="inputUnfocusUnpopulate = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                ng-model="inputUnfocusUnpopulate">
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="inputUnfocusPopulate = 'John Doe'">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                ng-model="inputUnfocusPopulate">
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="inputUnfocusInvalid = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                minlength="3"
+                                maxlength="5"
+                                required
+                                ng-model="inputUnfocusInvalid"
+                            >
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Focused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="inputFocusUnpopulate = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                ng-model="inputFocusUnpopulate"
+                            >
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="inputFocusPopulate = 'John Doe'">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                ng-model="inputFocusPopulate"
+                            >
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="inputFocusInvalid = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                minlength="3"
+                                maxlength="5"
+                                required
+                                ng-model="inputFocusInvalid"
+                            >
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <fs-heading>Select Elements</fs-heading>
+        <div layout="column">
+            <div layout="row">
+                <div flex="10">
+                </div>
+                <div flex layout="row" layout-align="space-around center">
+                    <div>
+                        Unpopulated
+                    </div>
+                    <div>
+                        Populated
+                    </div>
+                    <div>
+                        Invalid
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Unfocused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectUnfocusUnpopulate = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectUnfocusUnpopulate">
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectUnfocusPopulate = '1'">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectUnfocusPopulate">
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectUnfocusInvalid = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectUnfocusInvalid" required>
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Focused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectFocusUnpopulate = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectFocusUnpopulate">
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectFocusPopulate = '1'">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectFocusPopulate">
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="selectFocusInvalid = ''">
+                            <label>
+                                Full Name
+                            </label>
+                            <md-select ng-model="selectFocusInvalid" required>
+                                <md-option ng-repeat="item in list" value="{{item.id}}">
+                                    {{item.name}}
+                                </md-option>
+                            </md-select>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <fs-heading>Text Areas</fs-heading>
+        <div layout="column">
+            <div layout="row">
+                <div flex="10">
+                </div>
+                <div flex layout="row" layout-align="space-around center">
+                    <div>
+                        Unpopulated
+                    </div>
+                    <div>
+                        Populated
+                    </div>
+                    <div>
+                        Invalid
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Unfocused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container ng-init="textareaUnfocusUnpopulate = ''">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaUnfocusUnpopulate" md-maxlength="150" rows="5"></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="textareaUnfocusPopulate = 'John Doe'">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaUnfocusPopulate" md-maxlength="150" rows="5"></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container ng-init="textareaUnfocusInvalid = ''">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaUnfocusInvalid" md-maxlength="150" rows="5" required></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center center">
+                    Focused
+                </div>
+                <div flex layout="row" class="container-row">
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="textareaFocusUnpopulate = ''">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaFocusUnpopulate" md-maxlength="150" rows="5"></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="textareaFocusPopulate = 'John Doe'">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaFocusPopulate" md-maxlength="150" rows="5"></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                    <div flex layout="column">
+                        <md-input-container class="md-input-focused" ng-init="textareaFocusInvalid = ''">
+                            <label>
+                                Biography
+                            </label>
+                            <textarea ng-model="textareaFocusInvalid" md-maxlength="150" rows="5" required></textarea>
+                            <div class="hint">{{hint}}</div>
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <fs-heading>Stacked Inputs</fs-heading>
+        <div>
+            <md-input-container class="md-block" ng-init="stackedInputFirstName = ''">
+                <label>
+                    First Name
+                </label>
+                <input
+                    type="text"
+                    ng-model="stackedInputFirstName"
+                    required
+                >
+                <!--<div class="hint">{{hint}}</div>-->
+            </md-input-container>
+            <md-input-container class="md-block" ng-init="stackedInputMiddleName = 'Jay'">
+                <label>
+                    First Name
+                </label>
+                <input
+                    type="text"
+                    ng-model="stackedInputMiddleName"
+                    md-maxlength="10" minlength="4" maxlength="10"
+                >
+                <div class="hint">{{hint}}</div>
+            </md-input-container>
+            <md-input-container class="md-block" ng-init="stackedInputLastName = 'Doe'">
+                <label>
+                    Last Name
+                </label>
+                <input
+                    type="text"
+                    ng-model="stackedInputLastName"
+                >
+                <div class="hint">{{hint}}</div>
+            </md-input-container>
+        </div>
+
+        <md-button class="md-raised md-accent submit" type="submit">Submit</md-button>
+        <md-button class="md-raised md-accent" type="button" ng-click="background = !background">Toggle Background</md-button>
+    </form>
+</div>
+</script>
+<fs-code fs-html-include="'include.html'"></fs-code>
+
+
+<style>
+fs-heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container-row [layout='column'] {
+    margin: 10px;
+}
+
+.container-background .container-row [layout='column'] {
+    background-color: #eee;
+}
+.container-row {
+  
+}
+</style>
