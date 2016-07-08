@@ -721,3 +721,15 @@ md-autocomplete-container {
 md-toast {
     position: fixed;
 }
+
+
+.md-container-short {
+
+	&.md-input-container {
+		min-height: 0;
+	}
+
+	.md-errors-spacer {
+		display: none;
+	}
+}
