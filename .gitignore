@@ -3,3 +3,5 @@
 /src/bower_components
 /src/node_modules
 /src/dist
+/*.sublime-project
+/*.sublime-workspace

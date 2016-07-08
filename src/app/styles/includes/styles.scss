@@ -672,9 +672,7 @@ md-toast {
 
 .md-short-container {
 
-    &.md-input-container {
-        min-height: 0;
-    }
+    min-height: 0;
 
     .md-errors-spacer {
         display: none;
