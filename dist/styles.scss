@@ -19,58 +19,6 @@ a {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-
-	&.md-button-success {
-
-		&:active, &:focus, & {
-		    background: $color-success;
-		    color: #fff;
-		}
-
-		&:hover {
-		    background: $color-success;
-		    opacity: .4;
-		}
-	}
-
-	&.md-button-warning {
-
-		&:active, &:focus, & {
-		    background: $color-warning;
-		    color: #fff;
-		}
-
-		&:hover {
-		    background: $color-warning;
-		    opacity: .4;
-		}
-	}
-
-	&.md-button-primary {
-
-		&:active, &:focus, & {
-		    background: $color-primary;
-		    color: #fff;
-		}
-
-		&:hover {
-		    background: $color-primary;
-		    opacity: .4;
-		}
-	}
-
-	&.md-button-danger {
-
-		&:active, &:focus, & {
-		    background: $color-danger;
-		    color: #fff;
-		}
-
-		&:hover {
-		    background: $color-danger;
-		    opacity: .4;
-		}
-	}
 }
 
 .md-button.disabled,
@@ -722,14 +670,13 @@ md-toast {
     position: fixed;
 }
 
+.md-short-container {
 
-.md-container-short {
+    &.md-input-container {
+        min-height: 0;
+    }
 
-	&.md-input-container {
-		min-height: 0;
-	}
-
-	.md-errors-spacer {
-		display: none;
-	}
+    .md-errors-spacer {
+        display: none;
+    }
 }

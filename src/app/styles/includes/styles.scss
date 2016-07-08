@@ -669,3 +669,14 @@ md-autocomplete-container {
 md-toast {
     position: fixed;
 }
+
+.md-short-container {
+
+    &.md-input-container {
+        min-height: 0;
+    }
+
+    .md-errors-spacer {
+        display: none;
+    }
+}
