@@ -1,0 +1,72 @@
+<div layout="row" layout-fill>
+    <div class="left-nav" style="width: 250px;">
+
+        <a href ng-click="toggleSection('spec')"><h4>Visual Spec</h4></a>
+
+        <div ng-show="patternSection=='spec'">
+
+            <ul>
+                <li><a href="/patterns/form-inputs">Inputs</a></li>
+                <li><a href="/patterns/specontainers">Containers & Inputs</a></li>
+                <li><a href="/patterns/specexamples">Examples</a></li>
+            </ul>
+        </div>
+    </div>
+    <div flex>
+        <div ng-include="include"></div>
+    </div>
+</div>
+
+<style>
+
+.left-"fs-angular-ago": "latest", {
+    padding-right: 40px;
+}
+
+.left-nav a {
+    display: block;
+}
+
+.fs-code .example {
+    padding: 30px;
+    background: #D2D2D2;
+    border: 1px solid #bbb;
+    border-top: 0;
+}
+
+.fs-code > md-tabs > md-tabs-wrapper {
+    border: 1px solid #bbb;
+}
+
+.fs-code .example .content {
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+    border-radius: 3px;
+    padding: 25px;
+}
+
+h4 {
+    margin-bottom: 3px;
+}
+
+pre {
+    margin: 0;
+}
+
+.title span:last-child md-icon {
+    display: none;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+md-tab-content {
+    transform: none;
+}
+
+</style>

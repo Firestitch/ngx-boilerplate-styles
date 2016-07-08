@@ -1,0 +1,25 @@
+<md-dialog aria-label="Modal 1">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Modal</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                Vestibulum non purus sit amet mauris ornare aliquam in in risus. Ut maximus pulvinar lectus, sed euismod sem sagittis id. Etiam quis diam urna. Phasellus vitae eros in lectus fermentum iaculis. Etiam sit amet rutrum enim. Vivamus ut suscipit massa, at pretium mauris. Maecenas id magna a metus consequat facilisis vel at felis.
+
+                <h2>{{text}}</h2>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button ui-sref="default.patternsnestedmodal">
+                Nested Modal
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

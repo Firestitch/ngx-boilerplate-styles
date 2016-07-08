@@ -1,0 +1,30 @@
+<div class="fs-code">
+
+    <md-tabs md-dynamic-height layout="column" layout-fill>
+        <md-tab label="Example" data-ng-if="example!==false">
+            <md-tab-body>
+                <div class="example">
+                    <div ng-if="html" ng-bind-html="html"></div>
+                    <div ng-if="htmlInclude" ng-include="htmlIncludeUrl" class="content"></div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+        <md-tab label="HTML" data-ng-if="html || htmlInclude">
+            <md-tab-body>
+                <div class="html">
+                    <div ng-if="html" hljs hljs-source="html" hljs-language="html"></div>
+                    <div ng-if="htmlInclude" hljs hljs-include="htmlIncludeUrl" class="html" hljs-language="html"></div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+
+        <md-tab label="JS" data-ng-if="js || jsInclude">
+            <md-tab-body>
+                <div class="js">
+                    <div ng-if="js" hljs hljs-source="js" hljs-language="js"></div>
+                    <div ng-if="jsInclude" hljs hljs-include="jsIncludeUrl" class="js" hljs-language="js"></div>
+                </div>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+</div>

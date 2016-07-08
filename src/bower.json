@@ -8,7 +8,20 @@
   "dependencies": {
     "angular": "1.5.0",
     "angular-material": "1.0.5",
-    "angular-ui-router": "0.2.15"    
+    "angular-filter": "0.5.3",
+    "angular-loading-bar": "0.8.0",
+    "angular-ui-router": "0.2.15",
+    "highlightjs": "9.0.0",
+    "angular-highlightjs": "0.6.0",
+    "angular-loading-bar": "0.8.0",
+    "fs-angular-address": "latest",
+    "fs-angular-alert": "latest",
+    "fs-angular-bodyroute": "latest",
+    "fs-angular-lister": "latest",
+    "fs-angular-modal": "latest",
+    "fs-angular-password": "latest",
+    "fs-angular-tabnav": "latest",
+    "fs-angular-validate": "latest"
   },
   "devDependencies": {
     "angular-mocks": "1.5.0",

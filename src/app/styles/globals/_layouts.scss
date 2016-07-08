@@ -10,3 +10,14 @@
 .cf:after {
     clear: both;
 }
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    min-width: 943px;
+    height: 100%;
+}
