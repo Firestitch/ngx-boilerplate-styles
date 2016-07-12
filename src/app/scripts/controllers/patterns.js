@@ -237,10 +237,30 @@
                     label: 'Date'
                 },
                 {
+                    name: 'search',
+                    type: 'text',
+                    label: 'Search'
+                },
+                {
+                    name: 'state',
+                    type: 'select',
+                    label: 'State',
+                    values: {
+                        undefined: 'All',
+                        active: 'Active',
+                        deleted: 'Deleted'
+                    }
+                },
+                {
+                    name: 'date',
+                    type: 'date',
+                    label: 'Date'
+                },
+                {
                     name: 'range',
                     type: 'range',
                     label: 'Numbered range',
-                    placeholders: ['Min', 'Max']
+                    placeholder: ['Min long placeholder', 'Max long placeholder']
                 }
             ]
         };

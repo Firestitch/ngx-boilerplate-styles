@@ -64,7 +64,7 @@ md-dialog-actions .md-button.md-button-primary {
 
 md-datepicker-container {
     font-size: 15px;
-    /*display: inline-block;*/
+    display: inline-block;
     position: relative;
 
     padding: 2px;
@@ -668,10 +668,14 @@ md-toast {
 }
 
 .md-short-container {
-
     min-height: 0;
+    margin-bottom: 0;
 
     .md-errors-spacer {
         display: none;
+    }
+
+    &.md-block {
+        padding-bottom: 2px;
     }
 }
