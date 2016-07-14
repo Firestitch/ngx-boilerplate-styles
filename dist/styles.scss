@@ -632,14 +632,6 @@ md-datepicker-container {
     }
 }
 
-md-checkbox-container {
-
-}
-
-md-radiobutton-container {
-
-}
-
 md-autocomplete-container {
     md-autocomplete-wrap {
         border-bottom: 1px solid rgb(225, 225, 225);
@@ -674,26 +666,7 @@ md-datepicker-container {
         margin-top: 0;
     }
 
-    &.md-short,
-    &.md-short-container {
-        min-height: 0;
-        margin-bottom: 0;
-
-        .md-errors-spacer {
-            display: none;
-        }
-
-        &.md-block {
-            padding-bottom: 2px;
-        }
-
-        .md-select-value {
-            box-sizing: border-box;
-            min-height: 31px;
-        }
-    }
-
-
+    &.md-no-message,
     &.md-no-hints-errors {
         min-height: 0;
         margin-bottom: 0;
