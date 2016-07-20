@@ -664,6 +664,9 @@ md-datepicker-container {
 
     &.md-no-label {
         margin-top: 0;
+        label {
+            display: none;
+        }
     }
 
     &.md-no-message,
