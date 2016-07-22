@@ -31,7 +31,7 @@ a {
 }
 
 .md-dialog-container {
-    position: fixed;
+    /*position: fixed;*/ //No needed in v1.0.9 anymore
 }
 
 md-dialog-actions .md-button.md-button-primary {
@@ -665,7 +665,7 @@ md-datepicker-container {
     &.md-no-label {
         margin-top: 0;
 
-        label { 
+        label {
             display: none;
         }
     }
