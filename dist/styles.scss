@@ -689,3 +689,19 @@ md-datepicker-container {
         }
     }
 }
+
+md-select-menu {
+
+    md-option,
+    md-option.md-primary {
+        color: rgba(0, 0, 0, 0.87);
+
+        &[selected] {
+            color: rgba(0, 0, 0, 0.87);
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+    }
+}
