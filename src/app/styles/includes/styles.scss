@@ -552,6 +552,14 @@ md-input-container {
 
                 }
             }
+
+            .md-container {
+                display: inline;
+
+                .md-icon {
+                    display: inline;
+                }
+            }
         }
     }
 }
