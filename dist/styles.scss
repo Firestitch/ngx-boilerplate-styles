@@ -683,7 +683,7 @@ md-datepicker-container {
         min-height: 0;
         margin-bottom: 0;
 
-        .md-errors-spacer {
+        .md-errors-spacer, .hint {
             display: none;
         }
 
@@ -712,4 +712,8 @@ md-select-menu {
             }
         }
     }
+}
+
+.md-checkbox-enabled[selected] .md-icon:after {
+    border-color: rgba(255,255,255,0.87);
 }
