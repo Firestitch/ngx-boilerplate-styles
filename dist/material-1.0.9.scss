@@ -4,5 +4,9 @@ md-input-container {
     &.md-has-icon {
         padding-left: 2px;
         padding-right: 2px;
+
+        > label {
+            left: 0;
+        }
     }
 }

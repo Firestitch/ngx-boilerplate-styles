@@ -231,7 +231,7 @@ md-datepicker-container {
     &.ng-empty.ng-invalid-valid {
 
         label {
-            padding-left: 6px;
+            padding-left: 4px;
             margin-top: 0;
             transform: translate3d(0, 6px, 0) scale(0.75);
         }
@@ -455,7 +455,7 @@ md-input-container {
     &.md-input-has-value,
     &.md-input-has-placeholder{
         label, label:not(.md-no-float):not(.md-container-ignore) {
-            padding-left: 6px;
+            padding-left: 4px;
             margin-top: 0;
         }
     }
