@@ -354,6 +354,7 @@ md-input-container {
     &[class|="flex"] {
         // because flex changes its display from block to flex and its box-sizing from content-box to border-box
         min-height: 76px;
+        max-height: 0;
     }
 
     // icon offset should have higher priority as normal label
