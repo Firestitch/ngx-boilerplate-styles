@@ -9,4 +9,10 @@ md-input-container {
             left: 0;
         }
     }
+
+    td &:after {
+        content: '';
+        display: initial;
+        clear: both;
+    }
 }
