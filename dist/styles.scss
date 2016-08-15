@@ -129,8 +129,6 @@ md-datepicker-container {
         font-size: 15px;
         color: rgba(0,0,0,0.87);
         order: 2;
-        margin-top: 1px;
-        margin-bottom: -1px;
 
         padding: 0 2px;
 
@@ -190,7 +188,7 @@ md-datepicker-container {
 	    right: auto;
 	    padding-left: 6px;
 
-        transform: translate3d(0, 6px, 0) scale(0.75);
+        transform: translate3d(0, 7px, 0) scale(0.75);
         transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
         transform-origin: left top;
 
@@ -234,7 +232,7 @@ md-datepicker-container {
         label {
             padding-left: 4px;
             margin-top: 0;
-            transform: translate3d(0, 6px, 0) scale(0.75);
+            transform: translate3d(0, 7px, 0) scale(0.75);
         }
     }
 
@@ -458,6 +456,7 @@ md-input-container {
         label, label:not(.md-no-float):not(.md-container-ignore) {
             padding-left: 4px;
             margin-top: 0;
+            transform: translate3d(0, 7px, 0) scale(0.75);
         }
     }
 
@@ -527,7 +526,7 @@ md-input-container {
             padding-bottom: 2px;
 
             > * {
-                margin-bottom: 3px;
+                margin-bottom: 4px;
             }
 
             &.md-select-placeholder {
@@ -538,7 +537,7 @@ md-input-container {
                 width: 15px;
                 margin-top: 2px;
                 margin-right: 0;
-                margin-bottom: 3px;
+                margin-bottom: 4px;
 
                 &:after {
 
