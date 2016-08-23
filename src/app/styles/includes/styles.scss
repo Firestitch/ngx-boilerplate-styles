@@ -714,3 +714,11 @@ md-select-menu {
 .md-checkbox-enabled[selected] .md-icon:after {
     border-color: rgba(255,255,255,0.87);
 }
+
+md-autocomplete[md-floating-label] {
+    md-input-container {
+        min-height: inherit;
+        padding-bottom: 2px;
+        margin: 18px 0;
+    }
+}
