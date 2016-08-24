@@ -673,7 +673,8 @@ md-datepicker-container {
     &.md-no-label {
         margin-top: 0;
 
-        label {
+        &.md-input-has-value label,
+        &.md-input-focused label {
             display: none;
         }
     }
