@@ -93,7 +93,7 @@ md-datepicker-container {
         }
 
         .md-datepicker-input {
-            min-width: 0;
+            min-width: 90px;
             max-width: none;
             width: 100%;
         }
@@ -534,6 +534,7 @@ md-input-container {
     }
 
     md-select {
+        min-width: 80px;
 
         &:not([disabled]):focus {
             .md-select-value {
