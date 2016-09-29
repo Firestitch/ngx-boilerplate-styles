@@ -308,23 +308,6 @@ md-datepicker-container {
     }
 }
 
-md-checkbox-container,
-md-radiobutton-container {
-
-	margin-bottom: 29px;
-	margin-top: 0px;
-
-	label {
-	    transform-origin: left;
-	    -webkit-transform: scale(0.75);
-	    transform: scale(0.75);
-	    color: rgba(0,0,0,0.54);
-	    margin-bottom: 1.5px;
-	    display: block;
-	}
-}
-
-
 fs-heading {
     color: #272727;
     font-size: 20px;
@@ -582,6 +565,7 @@ md-input-container {
 }
 
 md-input-container,
+md-radiobutton-container,
 md-datepicker-container {
 
     .hint {
@@ -730,5 +714,98 @@ md-autocomplete[md-floating-label] {
         min-height: inherit;
         padding-bottom: 2px;
         margin: 18px 0;
+    }
+}
+
+md-checkbox-container,
+md-radiobutton-container {
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+
+    padding: 2px 2px 20px;
+    margin: 18px 0 0;
+    vertical-align: middle;
+    min-height: 54px;
+
+    &.md-block {
+        display: block;
+    }
+
+    label {
+        line-height: 21px;
+
+		position: absolute;
+	    bottom: 100%;
+	    left: 0;
+	    right: auto;
+	    padding-left: 6px;
+
+        transform: translate3d(0, 7px, 0) scale(0.75);
+        transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+        transform-origin: left top;
+
+	    color: rgba(0, 0, 0, 0.54);
+        pointer-events: none;
+
+        md-icon,
+        md-icon.material-icons {
+            vertical-align: text-bottom;
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    md-radio-group {
+        display: block;
+        padding-bottom: 1px;
+    }
+
+    md-radio-group md-radio-button {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:not(:first-child) {
+            margin-top: 0;
+        }
+
+        .md-container {
+            margin-left: 2px;
+        }
+
+        .md-label {
+            line-height: 20px;
+            margin-left: 27px;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &[md-stacked] {
+        md-radio-group {
+            md-radio-button {
+                display: block;
+            }
+        }
+    }
+
+
+    .hint {
+        /*padding-top: 6px;*/
+    }
+
+    ng-message,
+    data-ng-message,
+    x-ng-message,
+    [ng-message],
+    [data-ng-message],
+    [x-ng-message],
+    [ng-message-exp],
+    [data-ng-message-exp],
+    [x-ng-message-exp] {
+        /*padding-top: 6px;*/
     }
 }
