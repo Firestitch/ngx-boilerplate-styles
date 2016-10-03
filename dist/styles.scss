@@ -702,6 +702,14 @@ md-select-menu {
                 color: rgba(0, 0, 0, 0.87);
             }
         }
+
+        &[disabled] {
+            color: rgba(0, 0, 0, 0.26);
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.26);
+            }
+        }
     }
 }
 
