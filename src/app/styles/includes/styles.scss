@@ -765,6 +765,22 @@ md-radiobutton-container {
         }
     }
 
+    .hint {
+    }
+
+    ng-message,
+    data-ng-message,
+    x-ng-message,
+    [ng-message],
+    [data-ng-message],
+    [x-ng-message],
+    [ng-message-exp],
+    [data-ng-message-exp],
+    [x-ng-message-exp] {
+    }
+}
+
+md-radiobutton-container {
     md-radio-group {
         display: block;
         padding-bottom: 1px;
@@ -794,26 +810,38 @@ md-radiobutton-container {
 
     &[md-stacked] {
         md-radio-group {
-            md-radio-button {
-                display: block;
+            padding-bottom: 0;
+        }
+
+        md-radio-group md-radio-button {
+            display: block;
+
+            &:first-child {
+                &:last-child {
+                }
+            }
+
+            &:not(:first-child) {
+                .md-container {
+                    margin-top: -1px;
+                }
+
+                .md-label {
+                    line-height: 20px;
+                    margin-top: 3px;
+                    margin-bottom: 5px;
+                }
             }
         }
-    }
 
-
-    .hint {
-        /*padding-top: 6px;*/
+        .hint {
+            padding-top: 0;
+            line-height: 24px;
+            top: 1px;
+        }
     }
+}
 
-    ng-message,
-    data-ng-message,
-    x-ng-message,
-    [ng-message],
-    [data-ng-message],
-    [x-ng-message],
-    [ng-message-exp],
-    [data-ng-message-exp],
-    [x-ng-message-exp] {
-        /*padding-top: 6px;*/
-    }
+md-checkbox-container {
+
 }
