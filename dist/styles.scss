@@ -783,6 +783,7 @@ md-radiobutton-container {
 md-radiobutton-container {
     md-radio-group {
         display: block;
+        margin-top: 2px;
         padding-bottom: 1px;
     }
 
@@ -796,15 +797,16 @@ md-radiobutton-container {
         }
 
         .md-container {
+            margin-top: -1px;
             margin-left: 2px;
         }
 
         .md-label {
-            line-height: 20px;
+            line-height: 15px;
             margin-left: 27px;
-            margin-top: 5px;
+            margin-top: 6px;
             margin-right: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
     }
 
@@ -822,15 +824,6 @@ md-radiobutton-container {
             }
 
             &:not(:first-child) {
-                .md-container {
-                    margin-top: -1px;
-                }
-
-                .md-label {
-                    line-height: 20px;
-                    margin-top: 3px;
-                    margin-bottom: 5px;
-                }
             }
         }
 
