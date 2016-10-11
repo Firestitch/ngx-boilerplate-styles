@@ -634,6 +634,42 @@ md-datepicker-container {
     }
 }
 
+md-radiobutton-container,
+md-checkbox-container {
+
+    ng-message,
+    data-ng-message,
+    x-ng-message,
+    [ng-message],
+    [data-ng-message],
+    [x-ng-message],
+    [ng-message-exp],
+    [data-ng-message-exp],
+    [x-ng-message-exp] {
+        padding-top: 6px;
+    }
+
+    &.ng-invalid {
+        .hint {
+            display: none;
+        }
+    }
+
+    form[fs-validate] & {
+        ng-message,
+        data-ng-message,
+        x-ng-message,
+        [ng-message],
+        [data-ng-message],
+        [x-ng-message],
+        [ng-message-exp],
+        [data-ng-message-exp],
+        [x-ng-message-exp] {
+            padding-top: 6px;
+        }
+    }
+}
+
 md-autocomplete-container {
     md-autocomplete-wrap {
         border-bottom: 1px solid rgb(225, 225, 225);
