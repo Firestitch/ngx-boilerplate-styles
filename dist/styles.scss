@@ -566,6 +566,7 @@ md-input-container {
 
 md-input-container,
 md-radiobutton-container,
+md-checkbox-container,
 md-datepicker-container {
 
     .hint {
@@ -846,5 +847,60 @@ md-radiobutton-container {
 }
 
 md-checkbox-container {
+
+    md-checkbox {
+        display: inline-block;
+        margin-top: 2px;
+        margin-right: 0;
+        margin-bottom: 0;
+
+        .md-container {
+            margin-top: -1px;
+            margin-left: 2px;
+        }
+
+        .md-label {
+            line-height: 15px;
+            margin-left: 27px;
+            margin-top: 6px;
+            margin-right: 6px;// Should 10px as specified in visual guide, but.. decreased on 4px in order to remove spacing between inline block elements
+            margin-bottom: 7px;
+        }
+
+        &:last-of-type {
+            .md-label {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .hint {
+        padding-top: 6px;
+    }
+
+    &[md-stacked] {
+
+        md-checkbox {
+            display: block;
+            margin-top: 0;
+
+            .md-label {
+                margin-right: 10px;
+            }
+
+            &:first-of-type {
+                margin-top: 2px;
+            }
+
+            &:last-of-type {
+            }
+        }
+
+        .hint {
+            padding-top: 0;
+            line-height: 24px;
+            top: 1px;
+        }
+    }
 
 }
