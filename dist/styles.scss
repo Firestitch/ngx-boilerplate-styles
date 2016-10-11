@@ -805,8 +805,14 @@ md-radiobutton-container {
             line-height: 15px;
             margin-left: 27px;
             margin-top: 6px;
-            margin-right: 10px;
+            margin-right: 6px;// Should 10px as specified in visual guide, but.. decreased on 4px in order to remove spacing between inline block elements
             margin-bottom: 7px;
+        }
+
+        &:last-child {
+            .md-label {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -817,6 +823,10 @@ md-radiobutton-container {
 
         md-radio-group md-radio-button {
             display: block;
+
+            .md-label {
+                margin-right: 10px;
+            }
 
             &:first-child {
                 &:last-child {
