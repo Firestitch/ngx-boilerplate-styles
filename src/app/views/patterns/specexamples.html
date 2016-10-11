@@ -399,6 +399,100 @@
             </div>
         </div>
 
+        <fs-heading>Checkboxes</fs-heading>
+        <div layout="column">
+            <div layout="row">
+                <div flex="10">
+                </div>
+                <div flex layout="row" class="boxes-row">
+                    <div flex layout="column">
+                        Inline, single box
+                    </div>
+                    <div flex layout="column">
+                        Stacked, single box
+                    </div>
+                    <div flex layout="column">
+                        Inline, multiple boxes
+                    </div>
+                    <div flex="15" layout="column">
+                        Stacked, multiple boxes
+                    </div>
+                </div>
+            </div>
+
+            <div layout="row">
+                <div layout="row" flex="10" layout-align="center start" style="margin-top: 36px;">
+                    Valid
+                </div>
+                <div flex layout="row" class="boxes-row">
+                    <div flex layout="column">
+                        <div>
+                            <md-checkbox-container class="md-block">
+                                <label>
+                                    Inline, single
+                                </label>
+                                <md-checkbox ng-model="cb1">
+                                    Red
+                                </md-checkbox>
+                                <div class="hint">Hint here!</div>
+                            </md-checkbox-container>
+                        </div>
+                    </div>
+                    <div flex layout="column">
+                        <div>
+                            <md-checkbox-container md-stacked class="md-block">
+                                <label>
+                                    Stacked, single
+                                </label>
+                                <md-checkbox ng-model="cb2">
+                                    Reg
+                                </md-checkbox>
+                                <div class="hint">Hint here!</div>
+                            </md-checkbox-container>
+                        </div>
+                    </div>
+                    <div flex layout="column">
+                        <div>
+                            <md-checkbox-container class="md-block">
+                                <label>
+                                    Inline, multiple
+                                </label>
+                                <md-checkbox ng-model="cb3">
+                                    Red
+                                </md-checkbox>
+                                <md-checkbox ng-model="cb4">
+                                    Green
+                                </md-checkbox>
+                                <md-checkbox ng-model="cb5">
+                                    Blue
+                                </md-checkbox>
+                                <div class="hint">Hint here!</div>
+                            </md-checkbox-container>
+                        </div>
+                    </div>
+                    <div flex="15" layout="column">
+                        <div>
+                            <md-checkbox-container md-stacked class="md-block">
+                                <label>
+                                    Stacked, multiple
+                                </label>
+                                <md-checkbox ng-model="cb6">
+                                    Red
+                                </md-checkbox>
+                                <md-checkbox ng-model="cb7">
+                                    Green
+                                </md-checkbox>
+                                <md-checkbox ng-model="cb8">
+                                    Blue
+                                </md-checkbox>
+                                <div class="hint">Hint here!</div>
+                            </md-checkbox-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <fs-heading>Stacked Inputs</fs-heading>
         <div>
             <md-input-container class="md-block" ng-init="stackedInputFirstName = ''">
@@ -450,6 +544,7 @@ fs-heading {
 }
 
 .buttons-row [layout='column'],
+.boxes-row [layout='column'],
 .container-row [layout='column'] {
     margin: 10px;
 }
@@ -458,6 +553,7 @@ fs-heading {
     background-color: #eee;
 }
 
+.container-background .boxes-row [layout='column'] > div,
 .container-background .buttons-row [layout='column'] > div {
     background-color: #eee;
 }
