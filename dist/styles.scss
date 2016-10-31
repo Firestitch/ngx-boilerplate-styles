@@ -636,8 +636,6 @@ md-datepicker-container {
         }
     }
 
-	/*
-	We should not be hiding hints when the interface is invalid
     &.md-input-invalid {
         .hint {
             display: none;
@@ -649,7 +647,6 @@ md-datepicker-container {
             display: none;
         }
     }
-    */
 }
 
 md-autocomplete-container {
