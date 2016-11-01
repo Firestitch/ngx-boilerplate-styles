@@ -1,6 +1,22 @@
 <script type="text/ng-template" id="views/pattern/include.html">
-   
+
     <form name="inputsForm" fs-validate>
+
+    	<div layout="row">
+    		<div flex="50">
+		        <md-text-container class="md-block">
+		            <label>Primary Email</label>
+		            <div class="text">Text Text Text Text Text Text Text</div>
+		        </md-text-container>
+	        </div>
+	    	<div flex="50">
+		        <md-input-container class="md-block">
+		            <label>Primary Email</label>
+		            <input type="text">
+		        </md-input-container>
+	        </div>
+    	</div>
+
         <md-datepicker-container class="md-block">
             <label>
                 <md-icon>
@@ -31,7 +47,7 @@
             </label>
             <input type="text">
         </md-input-container>
-        
+
         <md-input-container class="md-block">
             <input placeholder="Last Name">
         </md-input-container>
@@ -72,7 +88,7 @@
                 <md-icon>phone</md-icon> Phone Number</label>
             <input type="text">
         </md-input-container>
-    
+
             <md-input-container class="md-block">
                 <label>State</label>
                 <md-select ng-model="user.state">
@@ -85,8 +101,8 @@
                 <label>Postal Code</label>
                 <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
             </md-input-container>
-   
-    
+
+
         <div layout="row">
             <md-input-container flex="50">
                 <label>Company (Disabled)</label>
@@ -99,7 +115,7 @@
         </div>
 
 
-        <div layout="row">         
+        <div layout="row">
             <md-datepicker-container>
                 <label>Date</label>
                 <md-datepicker ng-model="myDate" required></md-datepicker>
@@ -108,7 +124,7 @@
             <md-input-container>
                 <label>Something</label>
                 <input ng-model="theMax">
-            </md-input-container>            
+            </md-input-container>
 
             <div md-color-picker ng-model="valueObj" label="Color"></div>
         </div>
@@ -159,14 +175,14 @@
         <div layout="row">
             <md-checkbox-container>
                 <label>Checkboxes</label>
-                <div layout="row">                        
+                <div layout="row">
                     <md-checkbox ng-model="$true" aria-label="Checkbox 1">
                         Checkbox 1
                     </md-checkbox>
-              
+
                     <md-checkbox ng-model="$true" aria-label="Checkbox 2">
                         Checkbox 2
-                    </md-checkbox>                       
+                    </md-checkbox>
                 </div>
             </md-checkbox-container>
         </div>
@@ -180,21 +196,21 @@
                     <md-radio-button value="Blue">Blue</md-radio-button>
                 </md-radio-group>
             </md-radiobutton-container>
-        </div>            
+        </div>
         <div layout="row">
             <h1>Alignment Check</h1>
         </div>
         <div layout="row">
             <md-checkbox-container>
                 <label>Checkboxes</label>
-                <div layout="row">                        
+                <div layout="row">
                     <md-checkbox ng-model="$true" aria-label="Checkbox 1">
                         Checkbox 1
                     </md-checkbox>
-              
+
                     <md-checkbox ng-model="$true" aria-label="Checkbox 2">
                         Checkbox 2
-                    </md-checkbox>                       
+                    </md-checkbox>
                 </div>
             </md-checkbox-container>
             <md-radiobutton-container>
@@ -221,7 +237,7 @@
                 <label>Postal Code</label>
                 <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
             </md-input-container>
-        
+
 
 
         </div>

@@ -308,16 +308,32 @@ md-datepicker-container {
     }
 }
 
+md-text-container {
+	.text {
+	    height: 28px;
+	    line-height: 28px;
+	}
+}
+
+md-text-container,
 md-checkbox-container,
 md-radiobutton-container {
 
 	margin-bottom: 29px;
 	margin-top: 0px;
 
+	md-checkbox,
+	md-radio-button {
+		margin-bottom: 0;
+		line-height: 28px;
+		height: 28px;
+	}
+
 	label {
+
+	    -webkit-transform: translate3d(0, 2px, 0) scale(0.75);
+	    transform: translate3d(0, 2px, 0) scale(0.75);
 	    transform-origin: left;
-	    -webkit-transform: scale(0.75);
-	    transform: scale(0.75);
 	    color: rgba(0,0,0,0.54);
 	    margin-bottom: 1.5px;
 	    display: block;
