@@ -344,7 +344,6 @@ md-radiobutton-container {
 fs-heading {
     color: #272727;
     font-size: 20px;
-    height: 36px;
     display: block;
     vertical-align: middle;
     position: relative;
@@ -359,6 +358,16 @@ fs-heading fs-heading-actions {
 
 fs-heading fs-heading-actions .md-button {
     margin: 0;
+}
+
+fs-heading fs-heading-subheading,
+fs-heading fs-heading-subheading * {
+	margin-top: 4px;
+	font-size: 14px;
+	display: block;
+    line-height: 0px;
+    padding-bottom: 3px;
+    color: #959595;
 }
 
 md-dialog {
