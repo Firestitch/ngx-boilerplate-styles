@@ -361,12 +361,15 @@ fs-heading fs-heading-actions .md-button {
 
 fs-heading fs-heading-subheading,
 fs-heading fs-heading-subheading * {
-	margin-top: 4px;
 	font-size: 14px;
-	display: block;
     line-height: 0px;
-    padding-bottom: 3px;
     color: #959595;
+}
+
+fs-heading fs-heading-subheading {
+	margin-top: 4px;
+    padding-bottom: 8px;
+   	display: block;
 }
 
 md-dialog {
