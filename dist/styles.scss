@@ -30,10 +30,6 @@ a {
     opacity: 1;
 }
 
-.md-dialog-container {
-    /*position: fixed;*/ //No needed in v1.0.9 anymore
-}
-
 md-dialog-actions .md-button.md-button-primary {
 
 	background: transparent;
@@ -51,14 +47,9 @@ md-dialog-actions .md-button.md-button-primary {
 }
 
 .md-datepicker-calendar-pane.md-pane-open {
-    /*display: none;*/
 
     .md-datepicker-input-mask {
         display: none;
-
-        .md-datepicker-input-mask-opaque {
-
-        }
     }
 }
 
@@ -71,6 +62,10 @@ md-datepicker-container {
     margin: 18px 0 0;
     vertical-align: middle;
     min-height: 54px;
+
+    .md-datepicker-button {
+    	display: none;
+    }
 
     &[flex],
     &[class~="flex"]
@@ -116,110 +111,13 @@ md-datepicker-container {
         }
     }
 
-    .md-datepicker-input-container {
-        box-sizing: border-box;
-        height: 31px;
-
-    	padding-bottom: 0;
-    	margin-left: 0;
-        border-bottom-color: rgba(0, 0, 0, 0.11);
-    }
-
-    .md-datepicker-input {
-        font-size: 15px;
-        color: rgba(0,0,0,0.87);
-        order: 2;
-
-        padding: 0 2px;
-
-        line-height: 26px;
-        height: 30px;
-
-        -ms-flex-preferred-size: 26px;
-        outline-offset: 0;
-
-        &:focus {
-            outline: none;
-        }
-        &:invalid {
-            outline: none;
-            box-shadow: none;
-        }
-        &.md-no-flex {
-            flex: none !important;
-        }
-    }
-
-    .md-button {
-
-        &:not(.md-mini) {
-        }
-
-        &.md-icon-button {
-
-            &.md-datepicker-triangle-button {
-                height: 20px;
-                width: 20px;
-                min-height: 20px;
-
-                padding: 0;
-                margin: 14px 8px 0 0;
-
-                &:not(.md-mini) {
-
-                }
-
-                .md-datepicker-expand-triangle {
-                    border: none;
-                    height: 100%;
-                    width: 100%;
-                    line-height: 20px;
-
-                    &:after {
-                        display: block;
-                        content: '\25BC';
-                        position: relative;
-                        top: -2px;
-                        speak: none;
-                        transform: scaleY(0.6) scaleX(1);
-                        color: rgba(0, 0, 0, 0.87);
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
-
-    .md-datepicker-button {
-    	display: none;
-    }
-}
-
-md-datepicker-container {
-
     label {
-        line-height: 21px;
-
-		position: absolute;
+        position: absolute;
 	    bottom: 100%;
 	    left: 0;
 	    right: auto;
 	    padding-left: 6px;
-
-        transform: translate3d(0, 7px, 0) scale(0.75);
-        transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
-        transform-origin: left top;
-
-	    color: rgba(0, 0, 0, 0.54);
         pointer-events: none;
-
-        md-icon,
-        md-icon.material-icons {
-            vertical-align: text-bottom;
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
-        }
     }
 
     &[class*="ng-"] {
@@ -227,17 +125,11 @@ md-datepicker-container {
         label {
             order: 1;
             z-index: 1;
-            padding-left: 2px;
-
             transform: translate3d(0, 28px, 0) scale(1);
-            transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
-
             color: rgba(0, 0, 0, 0.26);
         }
     }
-}
 
-md-datepicker-container {
     // ng-not-empty - denotes 'the view contains a non-empty value'
     // ng-empty     - denotes 'the view does not contain a value or the value is deemed "empty", as defined'
     &.md-datepicker-focused,
@@ -248,9 +140,7 @@ md-datepicker-container {
     &.ng-empty.ng-invalid-valid {
 
         label {
-            padding-left: 4px;
             margin-top: 0;
-            transform: translate3d(0, 7px, 0) scale(0.75);
         }
     }
 
@@ -259,7 +149,6 @@ md-datepicker-container {
     &.ng-not-empty {
 
         label {
-            color: rgba(0, 0, 0, 0.54);
             transition: none;
         }
 
@@ -268,8 +157,6 @@ md-datepicker-container {
             label {
                 color: rgba(0, 0, 0, 0.26);
                 transform: translate3d(0, 28px, 0) scale(1);
-                transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
-                transform-origin: left top;
             }
         }
     }
@@ -286,7 +173,6 @@ md-datepicker-container {
             }
 
             &.ng-invalid {
-                /*&:not(.ng-untouched),*/
                 &.ng-touched,
                 &.ng-invalid-valid  {
                     label {
@@ -331,13 +217,39 @@ md-radiobutton-container {
 	}
 
 	label {
-
 	    -webkit-transform: translate3d(0, 2px, 0) scale(0.75);
 	    transform: translate3d(0, 2px, 0) scale(0.75);
 	    transform-origin: left;
-	    color: rgba(0,0,0,0.54);
 	    margin-bottom: 1.5px;
 	    display: block;
+	}
+}
+
+
+md-checkbox-container.md-vertical md-checkbox {
+	display: block;
+    float: left;
+    clear: both;
+}
+
+md-checkbox-container.md-vertical:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+.md-checkbox-enabled[selected] .md-icon:after {
+    border-color: rgba(255,255,255,0.87);
+}
+
+md-radiobutton-container.md-horizontal {
+	md-radio-button {
+		margin-right: 16px;
+		display: inline;
 	}
 }
 
@@ -406,10 +318,6 @@ md-input-container {
         }
     }
 
-    &.md-icon-float {
-
-    }
-
     &.md-icon-left {
         padding-left: 28px;
         padding-right: 2px;
@@ -445,15 +353,6 @@ md-input-container {
         -ms-flex-preferred-size: 26px;
         padding-top: 0px;
         padding-bottom: 1px;
-
-        &:focus {
-        }
-
-        &:invalid {
-        }
-
-        &.md-no-flex {
-        }
     }
 
     .md-input[disabled],
@@ -466,40 +365,18 @@ md-input-container {
     }
 
     label {
-        line-height: 21px;
-
-        md-icon,
-        md-icon.material-icons {
-            vertical-align: text-bottom;
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
-        }
-
         padding-left: 2px;
-
-        &:not(.md-no-float) {
-        }
-
-        &:not(.md-container-ignore) {
-        }
 
         &:not(.md-no-float):not(.md-container-ignore) {
             padding-left: 2px;
         }
     }
 
-    .md-placeholder {
-    }
-
-
     &.md-input-focused,
     &.md-input-has-value,
     &.md-input-has-placeholder{
         label, label:not(.md-no-float):not(.md-container-ignore) {
-            padding-left: 4px;
             margin-top: 0;
-            transform: translate3d(0, 7px, 0) scale(0.75);
         }
     }
 
@@ -507,27 +384,9 @@ md-input-container {
     &:not(.md-input-invalid) {
 
         &.md-input-has-value {
-            label,
             md-icon {
                 color: rgba(0, 0, 0, 0.54);
             }
-        }
-
-        &.md-input-focused {
-            label,
-            md-icon,
-            &.md-accent label,
-            &.md-warn label {
-
-            }
-        }
-    }
-
-
-    &.md-input-invalid {
-        label,
-        &.md-input-focused label {
-
         }
     }
 
@@ -557,7 +416,6 @@ md-input-container {
         padding-top: 5px;
     }
 
-
     input, md-select, textarea {
         color: rgba(0, 0, 0, 0.87);
     }
@@ -581,10 +439,6 @@ md-input-container {
 
             > * {
                 margin-bottom: 4px;
-            }
-
-            &.md-select-placeholder {
-
             }
 
             .md-select-icon {
@@ -656,12 +510,6 @@ md-datepicker-container {
     form[fs-validate] & {
         ng-messages {
             position: relative;
-
-            /*ng-message {
-                font-size: 12px;
-                line-height: 14px;
-                padding-top: 5px;
-            }*/
         }
     }
 
@@ -734,34 +582,6 @@ md-datepicker-container {
     }
 }
 
-md-select-menu {
-
-    md-option,
-    md-option.md-primary {
-        color: rgba(0, 0, 0, 0.87);
-
-        &[selected] {
-            color: rgba(0, 0, 0, 0.87);
-
-            &:focus {
-                color: rgba(0, 0, 0, 0.87);
-            }
-        }
-
-        &[disabled] {
-            color: rgba(0, 0, 0, 0.26);
-
-            &:focus {
-                color: rgba(0, 0, 0, 0.26);
-            }
-        }
-    }
-}
-
-.md-checkbox-enabled[selected] .md-icon:after {
-    border-color: rgba(255,255,255,0.87);
-}
-
 md-autocomplete[md-floating-label] {
     md-input-container {
         min-height: inherit;
@@ -769,3 +589,40 @@ md-autocomplete[md-floating-label] {
         margin: 18px 0;
     }
 }
+
+md-input-container {
+    &.md-has-icon {
+        padding-left: 2px;
+        padding-right: 2px;
+
+        > label {
+            left: 0;
+        }
+    }
+
+    td &:after {
+        content: '';
+        display: initial;
+        clear: both;
+    }
+}
+
+label,
+.label {
+
+    line-height: 21px;
+    md-icon,
+    md-icon.material-icons {
+        font-size: 20px;
+        height: 20px;
+        width: 20px;
+    }
+
+	display: block;
+    transform: translate3d(0, 7px, 0) scale(0.75);
+    transition: cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+    transform-origin: left top;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+

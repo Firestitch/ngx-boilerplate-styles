@@ -1,18 +1,108 @@
 @import "styles.scss";
 
-md-input-container {
-    &.md-has-icon {
-        padding-left: 2px;
-        padding-right: 2px;
 
-        > label {
-            left: 0;
+md-select-menu {
+
+    md-option,
+    md-option.md-primary {
+        color: rgba(0, 0, 0, 0.87);
+
+        &[selected] {
+            color: rgba(0, 0, 0, 0.87);
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+
+        &[disabled] {
+            color: rgba(0, 0, 0, 0.26);
+
+            &:focus {
+                color: rgba(0, 0, 0, 0.26);
+            }
+        }
+    }
+}
+
+
+md-datepicker-container {
+
+    .md-datepicker-input {
+        font-size: 15px;
+        color: rgba(0,0,0,0.87);
+        order: 2;
+
+        padding: 0 2px;
+
+        line-height: 26px;
+        height: 30px;
+
+        -ms-flex-preferred-size: 26px;
+        outline-offset: 0;
+
+        &:focus {
+            outline: none;
+        }
+        &:invalid {
+            outline: none;
+            box-shadow: none;
+        }
+        &.md-no-flex {
+            flex: none !important;
         }
     }
 
-    td &:after {
-        content: '';
-        display: initial;
-        clear: both;
+    .md-button {
+
+        &:not(.md-mini) {
+        }
+
+        &.md-icon-button {
+
+            &.md-datepicker-triangle-button {
+                height: 20px;
+                width: 20px;
+                min-height: 20px;
+
+                padding: 0;
+                margin: 14px 8px 0 0;
+
+                &:not(.md-mini) {
+
+                }
+
+                .md-datepicker-expand-triangle {
+                    border: none;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 20px;
+
+                    &:after {
+                        display: block;
+                        content: '\25BC';
+                        position: relative;
+                        top: -2px;
+                        speak: none;
+                        transform: scaleY(0.6) scaleX(1);
+                        color: rgba(0, 0, 0, 0.87);
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .md-datepicker-button {
+    	display: none;
+    }
+
+    .md-datepicker-input-container {
+        box-sizing: border-box;
+        height: 31px;
+
+    	padding-bottom: 0;
+    	margin-left: 0;
+        border-bottom-color: rgba(0, 0, 0, 0.11);
     }
 }

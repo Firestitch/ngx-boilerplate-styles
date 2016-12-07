@@ -1,13 +1,13 @@
 {
   "name": "fs-boilerplate-styles",
   "namespace": "styles",
-  "port": "5017",   
+  "port": "5017",
   "moduleName": "app",
   "version": "0.0.0",
   "appPath": "app",
   "dependencies": {
     "angular": "1.5.0",
-    "angular-material": "1.0.9",
+    "angular-material": "1.1.1",
     "angular-filter": "0.5.3",
     "angular-loading-bar": "0.8.0",
     "angular-ui-router": "0.2.15",

@@ -1,0 +1,28 @@
+@import "styles.scss";
+
+md-datepicker-container {
+	md-datepicker {
+		overflow: visible;
+	}
+
+	.md-datepicker-triangle-button .md-datepicker-expand-triangle {
+		border-top-color: inherit
+	}
+
+	.md-icon-button + .md-datepicker-input-container {
+		margin-left: 0;
+		padding-left: 2px;
+	}
+
+	.md-datepicker-input-container {
+
+		&.md-datepicker-focused {
+			margin-bottom: -1px;
+		}
+
+		.md-datepicker-input {
+			height: 30px !important;
+			padding: 0;
+		}
+	}
+}
