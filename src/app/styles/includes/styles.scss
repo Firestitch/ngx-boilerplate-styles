@@ -208,6 +208,11 @@ md-radiobutton-container {
 
 	margin-bottom: 29px;
 	margin-top: 0px;
+	display: inline-block;
+
+	&.md-block {
+		display: block;
+	}
 
 	md-checkbox,
 	md-radio-button {
