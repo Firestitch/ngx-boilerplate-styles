@@ -421,20 +421,12 @@ md-input-container {
         padding-top: 5px;
     }
 
-    input, md-select, textarea {
-        color: rgba(0, 0, 0, 0.87);
-    }
-
     md-select {
         min-width: 80px;
 
         &:not([disabled]):focus {
             .md-select-value {
                 padding-bottom: 1px;
-
-                &.md-select-placeholder {
-                    color: rgba(0,0,0,0.87);
-                }
             }
         }
 
@@ -451,7 +443,6 @@ md-input-container {
                 margin-top: 1px;
                 margin-right: 0;
                 margin-bottom: 4px;
-                color: rgba(0, 0, 0, 0.87);
 
                 &:after {
                     font-size: 16px;
@@ -473,7 +464,6 @@ md-input-container,
 md-datepicker-container {
 
     .hint {
-        color: rgba(0, 0, 0, 0.87);
         font-size: 12px;
         line-height: 14px;
 
