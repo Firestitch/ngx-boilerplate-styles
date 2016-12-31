@@ -2,6 +2,21 @@
 
     <form name="inputsForm" fs-validate>
 
+<md-autocomplete-container md-no-clear>
+<md-autocomplete md-selected-item="selectedItem"
+				md-search-text="searchText"
+				md-items="item in getMatches(searchText)"
+				md-item-text="item.display">
+  <md-item-template>
+    <span md-highlight-text="searchText">{{item.display}}</span>
+  </md-item-template>
+  <md-not-found>
+    No matches found.
+  </md-not-found>
+</md-autocomplete>
+</md-autocomplete-container>
+
+	<br><br><br><br>
 
     	<label>Label Label Label Label</label>
     	<div class="label">Label Label Label Label</div>

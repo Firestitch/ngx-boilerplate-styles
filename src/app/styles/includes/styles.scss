@@ -435,7 +435,7 @@ md-input-container {
             padding-bottom: 2px;
 
             > * {
-                margin-bottom: 4px;
+                height: 100%;
             }
 
             .md-select-icon {
@@ -522,13 +522,28 @@ md-datepicker-container {
 }
 
 md-autocomplete-container {
+
+	&[md-no-clear] button {
+		display: none;
+	}
+
+	md-autocomplete {
+
+		height: auto;
+
+		input:not(.md-input) {
+			padding: 0 2px;
+	       	margin: 1px 0;
+	       	height: 30px;
+	       	font-size: inherit;
+	       	color: rgba(0,0,0,0.87);
+		}
+	}
+
     md-autocomplete-wrap {
+    	height: auto;
         border-bottom: 1px solid rgb(225, 225, 225);
         box-shadow: none !important;
-    }
-
-    input {
-        padding: 0 4px !important;
     }
 }
 
