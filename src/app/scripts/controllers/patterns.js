@@ -3,23 +3,23 @@
 
     angular.module('app')
 
-    .controller('PatternsCtrl', function ($scope, pattern, $templateCache, param1, param2, $rootScope) {
+    .controller('PatternsCtrl', function ($scope, pattern, $templateCache, param1, param2, $rootScope, $q) {
 
         if(!$rootScope.patternSection) {
             $rootScope.patternSection = 'spec';
         }
 
         $templateCache.remove('views/pattern/include.html');
-      
+
         $scope.pattern = pattern;
         $scope.param1 = param1;
         $scope.param2 = param2;
-      
+
         $scope.title = [];
         angular.forEach($scope.pattern.split('-'),function(part) {
-            
+
             var title = part.charAt(0).toUpperCase() + part.slice(1).replace(/_/g,' ');
-            
+
             $scope.title.push(title);
         });
 
@@ -30,8 +30,23 @@
         $scope.toggleSection = function(section) {
             $rootScope.patternSection = section;
         }
-    })
 
+
+    })
+    .controller('PatternInputCtrl', function ($scope, $q) {
+
+		$scope.query = function(text) {
+			return $q(function(resolve) {
+
+				var list = [{ name: 'Bob', value: 1 },
+							{ name: 'Ryan', value: 2 },
+							{ name: 'Jane', value: 3 },
+							{ name: 'Dave', value: 4 }];
+
+				resolve(list);
+			});
+		}
+    })
     .controller('PatternSpecExampleCtrl', function ($scope, $timeout) {
 
         $timeout(function() {
@@ -157,7 +172,7 @@
         $scope.listerConf = {
 
             data: function(query, cb) {
-                
+
                 query.count = 23;
                 fsApi
                     .get('dummy',query,{ url: 'https://service.firestitch.com/api/' })
@@ -173,7 +188,7 @@
             },
 
             actions: [
-                 
+
                 {
                     label: 'Edit',
                     icon: 'edit',
@@ -181,18 +196,18 @@
                         alert("Edit Action Click: " + JSON.stringify(data));
                     }
                 },
-               
+
                 {
                     label: 'Delete',
                     icon: 'delete',
-                    delete:  {  
+                    delete:  {
                                 content: 'Are you sure you would like to remove this?',
-                                ok: function(data) {                            
+                                ok: function(data) {
                                     alert("Delete Action Click: " + JSON.stringify(data));
                                 }
                             }
                 }
-               
+
             ],
 
             columns: [

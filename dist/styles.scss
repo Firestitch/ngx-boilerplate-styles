@@ -527,6 +527,11 @@ md-autocomplete-container {
 		display: none;
 	}
 
+    md-autocomplete-wrap {
+    	height: auto;
+        box-shadow: none !important;
+    }
+
 	md-autocomplete {
 
 		height: auto;
@@ -538,14 +543,30 @@ md-autocomplete-container {
 	       	font-size: inherit;
 	       	color: rgba(0,0,0,0.87);
 		}
+
+		button {
+		    position: absolute;
+		    right: 0;
+		    margin: 0;
+		}
+
+		&[md-floating-label] {
+			border: 0;
+		}
+
+		&:not([md-floating-label]) {
+			input {
+    			border-bottom: 1px solid rgb(225, 225, 225);
+
+    			&:focus {
+				    border-width: 2px;
+				    margin-bottom: 0px;
+				    height: 31px;
+    			}
+			}
+		}
 	}
-
-    md-autocomplete-wrap {
-    	height: auto;
-        box-shadow: none !important;
-    }
 }
-
 
 .md-open-menu-container,
 .md-select-menu-container {

@@ -1,11 +1,10 @@
-<script type="text/ng-template" id="views/pattern/include.html">
-
+<div ng-controller="PatternInputCtrl">
     <form name="inputsForm" fs-validate>
 
-<md-autocomplete-container md-no-clear>
+<md-autocomplete-container>
 <md-autocomplete md-selected-item="selectedItem"
 				md-search-text="searchText"
-				md-items="item in getMatches(searchText)"
+				md-items="item in query(searchText)"
 				md-item-text="item.display">
   <md-item-template>
     <span md-highlight-text="searchText">{{item.display}}</span>
@@ -266,5 +265,4 @@
 
 
     </form>
-</script>
-<fs-code fs-html-include="'include.html'"></fs-code>
+</div>
