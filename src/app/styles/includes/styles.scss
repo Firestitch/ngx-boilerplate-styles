@@ -654,4 +654,8 @@ label,
     color: rgba(0, 0, 0, 0.54);
 }
 
+/* Removes floating label zooming on page loads */
+md-input-container.md-input-has-value label {
+    transition-duration: 0s !important;
+}
 
