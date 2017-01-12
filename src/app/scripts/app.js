@@ -3,7 +3,7 @@
 angular
 .module('app', [
     'config',
-    'ngMaterial',    
+    'ngMaterial',
     'angular.filter',
     'ui.router',
     'fs-angular-modal',
@@ -15,6 +15,7 @@ angular
     'fs-angular-address',
     'fs-angular-validate',
     'fs-angular-password',
+    'fs-angular-checkboxes',
     'hljs',
     'angular-loading-bar'
 ])
@@ -43,7 +44,7 @@ angular
     })
 
     .state('default.patterns', {
-        url: '/patterns/:pattern/:param1/:param2', 
+        url: '/patterns/:pattern/:param1/:param2',
         templateUrl: 'views/patterns/patterns.html',
         controller: 'PatternsCtrl',
         params: {

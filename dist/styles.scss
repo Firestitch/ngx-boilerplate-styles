@@ -217,23 +217,26 @@ md-radiobutton-container {
 	md-checkbox,
 	md-radio-button {
 		margin-bottom: 0;
-		line-height: 28px;
-		height: 28px;
+		line-height: 26px;
+		height: 26px;
 	}
 
 	label {
-	    -webkit-transform: translate3d(0, 2px, 0) scale(0.75);
-	    transform: translate3d(0, 2px, 0) scale(0.75);
+	    -webkit-transform: translate3d(0, 0px, 0) scale(0.75);
+	    transform: translate3d(0, 0px, 0) scale(0.75);
 	    transform-origin: left;
-	    margin-bottom: 1.5px;
 	    display: block;
 	}
 }
 
+md-text-container {
+	&.md-no-message {
+		margin-bottom: 0;
+	}
+}
 
 md-checkbox-container.md-vertical md-checkbox {
 	display: block;
-    float: left;
     clear: both;
 }
 
@@ -433,10 +436,6 @@ md-input-container {
         .md-select-value {
             padding-top: 2px;
             padding-bottom: 2px;
-
-            > * {
-                height: 100%;
-            }
 
             .md-select-icon {
                 width: 15px;

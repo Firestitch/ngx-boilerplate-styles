@@ -1,6 +1,6 @@
 <div ng-controller="PatternInputCtrl">
     <form name="inputsForm" fs-validate>
-
+Autocomplete
 <md-autocomplete-container>
 <md-autocomplete md-selected-item="selectedItem"
 				md-search-text="searchText"
@@ -193,20 +193,21 @@
             <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
         </md-input-container>
 
-        <div layout="row">
-            <md-checkbox-container>
-                <label>Checkboxes</label>
-                <div layout="row">
-                    <md-checkbox ng-model="$true" aria-label="Checkbox 1">
-                        Checkbox 1
-                    </md-checkbox>
+	    <fs-heading class="first">Horizontal Checkboxes</fs-heading>
 
-                    <md-checkbox ng-model="$true" aria-label="Checkbox 2">
-                        Checkbox 2
-                    </md-checkbox>
-                </div>
-            </md-checkbox-container>
-        </div>
+	    <fs-checkboxes fs-model="horizontal" fs-items="items" fs-label="Horizontal Checkboxes"></fs-checkboxes>
+
+	    <fs-heading>Vertical Checkboxes</fs-heading>
+	    <fs-checkboxes fs-model="vertical" fs-items="items" fs-label="Vertical Checkboxes" fs-class="md-vertical"></fs-checkboxes>
+
+
+	    <fs-heading>Static Checkboxes</fs-heading>
+	    <md-checkbox-container>
+	        <label>Checkboxes</label>
+	        <md-checkbox ng-model="checkboxes.static1" aria-label="Checkbox">Checkbox 1</md-checkbox>
+	        <md-checkbox ng-model="checkboxes.static2" aria-label="Checkbox">Checkbox 2</md-checkbox>
+	    </md-checkbox-container>
+
 
         <div layout="row">
             <md-radiobutton-container>
@@ -224,7 +225,7 @@
         <div layout="row">
             <md-checkbox-container>
                 <label>Checkboxes</label>
-                <div layout="row">
+
                     <md-checkbox ng-model="$true" aria-label="Checkbox 1">
                         Checkbox 1
                     </md-checkbox>
@@ -232,7 +233,7 @@
                     <md-checkbox ng-model="$true" aria-label="Checkbox 2">
                         Checkbox 2
                     </md-checkbox>
-                </div>
+
             </md-checkbox-container>
             <md-radiobutton-container>
                 <label>Radio Button</label>
@@ -259,6 +260,30 @@
                 <input name="postalCode" ng-model="user.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
             </md-input-container>
 
+            <md-text-container>
+            	<label>Text Container</label>
+            	<div class="text">text text</div>
+            </md-text-container>
+
+	    <md-autocomplete-container>
+	        <md-autocomplete
+	                md-no-cache="true"
+	                md-selected-item="selected"
+	                md-search-text="search"
+	                md-items="item in query(search)"
+	                md-item-text="item.name"
+	                md-selected-item-change="change()"
+	                md-min-length="0"
+	                md-floating-label="Autocomplete with Label"
+	                md-autoselect>
+	                <md-item-template>
+	                	<span md-highlight-text="search" md-highlight-flags="^i">{{item.name}}</span>
+	                </md-item-template>
+	                <md-not-found>
+	                	No matches found
+	              	</md-not-found>
+	        </md-autocomplete>
+	    </md-autocomplete-container>
 
 
         </div>
