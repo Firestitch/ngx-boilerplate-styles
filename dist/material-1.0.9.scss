@@ -105,3 +105,22 @@ md-datepicker-container {
         border-bottom-color: rgba(0, 0, 0, 0.11);
     }
 }
+
+md-input-container {
+
+    md-select {
+
+        .md-select-value {
+            .md-select-icon {
+                width: 15px;
+                margin-top: 1px;
+                margin-right: 0;
+                margin-bottom: 4px;
+
+                &:after {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
