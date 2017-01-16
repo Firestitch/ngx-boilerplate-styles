@@ -295,6 +295,12 @@ fs-heading fs-heading-subheading {
 }
 
 md-dialog {
+
+	.md-toolbar-tools .super,
+	.md-toolbar-tools .sub {
+		font-size: 13px;
+	}
+
 	max-width: 1100px;
 }
 
@@ -655,4 +661,3 @@ label,
 md-input-container.md-input-has-value label {
     transition-duration: 0s !important;
 }
-
