@@ -15,7 +15,7 @@ a {
 
 .md-button {
 
-	&:not(.md-mini) {
+	&:not(.md-mini):not(.md-icon-button) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
