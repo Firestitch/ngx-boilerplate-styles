@@ -469,12 +469,11 @@ md-datepicker-container {
     .hint {
         font-size: 12px;
         line-height: 14px;
-
         padding-left: 2px;
         padding-top: 5px;
-
         position: relative;
         overflow: hidden;
+	clear: left;
     }
 
     ng-messages,
