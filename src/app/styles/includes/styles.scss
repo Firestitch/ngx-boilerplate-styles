@@ -204,7 +204,8 @@ md-text-container {
 
 md-text-container,
 md-checkbox-container,
-md-radiobutton-container {
+md-radiobutton-container,
+.fs-input-container {
 
 	margin-bottom: 29px;
 	margin-top: 0px;
@@ -464,16 +465,21 @@ md-input-container {
 
 md-input-container,
 md-text-container,
-md-datepicker-container {
+md-datepicker-container,
+md-checkbox-container,
+md-radiobutton-container,
+.fs-input-container {
 
     .hint {
         font-size: 12px;
         line-height: 14px;
+
         padding-left: 2px;
         padding-top: 5px;
+
         position: relative;
         overflow: hidden;
-	clear: left;
+		clear: left;
     }
 
     ng-messages,
