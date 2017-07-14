@@ -297,6 +297,15 @@ fs-heading fs-heading-subheading {
 
 md-dialog {
 
+	md-toolbar {
+		background-color: #fff !important;
+		color: #222 !important;
+	}
+
+	&:not(.fs-modal-prompt):not(.fs-modal-confirm) .md-dialog-content {
+		padding: 0px 20px;
+	}
+
 	.md-toolbar-tools .super,
 	.md-toolbar-tools .sub {
 		font-size: 13px;
