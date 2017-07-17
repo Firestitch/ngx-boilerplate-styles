@@ -265,7 +265,7 @@ md-radiobutton-container.md-horizontal {
 
 fs-heading {
     color: #272727;
-    font-size: 20px;
+    font-size: 19px;
     display: block;
     vertical-align: middle;
     position: relative;
@@ -297,13 +297,26 @@ fs-heading fs-heading-subheading {
 
 md-dialog {
 
-	md-toolbar {
-		background-color: #fff !important;
-		color: #222 !important;
-	}
+	&:not(.fs-modal-prompt):not(.fs-modal-confirm) {
 
-	&:not(.fs-modal-prompt):not(.fs-modal-confirm) .md-dialog-content {
-		padding: 0px 20px;
+		md-toolbar {
+			background-color: #fff !important;
+			color: #222 !important;
+		}
+
+		.md-toolbar-tools {
+			height: 80px;
+			max-height: 80px;
+			padding: 0 20px;
+
+			h1, h2, h3 {
+				font-size: 22px;
+			}
+		}
+
+		.md-dialog-content {
+			padding: 0px 20px;
+		}
 	}
 
 	.md-toolbar-tools .super,
@@ -313,6 +326,7 @@ md-dialog {
 
 	max-width: 1100px;
 }
+
 
 hr {
     border: 1px solid #D0D0D0;
