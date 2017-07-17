@@ -689,3 +689,27 @@ label,
 md-input-container.md-input-has-value label {
     transition-duration: 0s !important;
 }
+
+
+@media screen and (max-width: 599px) {
+	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm) .md-dialog-content {
+		padding: 6px;
+	}
+
+	md-dialog {
+
+		md-dialog-actions {
+			flex-direction: column-reverse;
+			flex: 1 0 auto;
+			padding-left: 16px;
+			.md-button {
+				width: 100%;
+			    margin: 8px;
+			    display: block;
+			}
+		}
+	}
+}
+
+
+
