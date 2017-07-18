@@ -297,7 +297,7 @@ fs-heading fs-heading-subheading {
 
 md-dialog {
 
-	&:not(.fs-modal-prompt):not(.fs-modal-confirm) {
+	&:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-modal-alert) {
 
 		md-toolbar {
 			background-color: #fff !important;
@@ -692,19 +692,19 @@ md-input-container.md-input-has-value label {
 
 
 @media screen and (max-width: 599px) {
-	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm) .md-dialog-content {
+	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-modal-alert) .md-dialog-content {
 		padding: 6px;
 	}
 
 	md-dialog {
 
 		md-dialog-actions {
-			flex-direction: column-reverse;
 			flex: 1 0 auto;
-			padding-left: 16px;
+			flex-direction: column-reverse;
+			padding: 8px 16px 0 16px;
 			.md-button {
 				width: 100%;
-			    margin: 8px;
+			    margin: 0 8px 8px 8px;
 			    display: block;
 			}
 		}
