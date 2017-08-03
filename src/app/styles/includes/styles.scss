@@ -305,8 +305,8 @@ md-dialog {
 		}
 
 		.md-toolbar-tools {
-			height: 80px;
-			max-height: 80px;
+			height: 70px;
+			max-height: 70px;
 			padding: 0 20px;
 
 			h1, h2, h3 {
@@ -692,8 +692,16 @@ md-input-container.md-input-has-value label {
 
 
 @media screen and (max-width: 599px) {
-	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-alert-modal) .md-dialog-content {
-		padding: 6px;
+	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-alert-modal) {
+
+		.md-toolbar-tools {
+	    	height: 50px;
+	    	max-height: 50px;
+	    }
+
+		.md-dialog-content {
+			padding: 0 15px;
+		}
 	}
 
 	md-dialog {
