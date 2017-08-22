@@ -601,6 +601,11 @@ md-autocomplete-container {
 .md-open-menu-container,
 .md-select-menu-container {
     transition-duration: 0ms !important;
+
+    md-content {
+    	padding-top: 8px;
+		padding-bottom: 8px;
+    }
 }
 
 .md-open-menu-container > md-menu-content > *,
