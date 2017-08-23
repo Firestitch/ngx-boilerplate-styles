@@ -565,6 +565,7 @@ md-autocomplete-container {
 	md-autocomplete {
 
 		height: auto;
+		padding-left: 2px;
 
 		input:not(.md-input) {
 			padding: 0 2px;
@@ -704,8 +705,9 @@ md-input-container.md-input-has-value label {
 
 md-chips-autocomplete-container {
 	.md-chips {
-		padding: 0 0 0 3px;
-		font-size: inherit;
+		padding: 0;
+	    font-size: inherit;
+	    margin: 0 -2px 0 2px;
 		md-chip-wrap {
 			font-size: inherit;
 		}
