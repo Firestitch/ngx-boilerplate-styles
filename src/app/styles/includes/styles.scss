@@ -262,15 +262,20 @@ md-radiobutton-container.md-horizontal {
 	}
 }
 
-
 fs-heading {
     color: #272727;
     font-size: 19px;
     display: block;
     vertical-align: middle;
     position: relative;
-    line-height: 25px;
+    line-height: 36px;
+    min-height: 36px;
     margin: 10px 0;
+    height: initial;
+}
+
+fs-heading * {
+	line-height: 5px;
 }
 
 fs-heading fs-heading-actions {
@@ -290,8 +295,7 @@ fs-heading fs-heading-subheading * {
 }
 
 fs-heading fs-heading-subheading {
-	margin-top: 4px;
-    padding-bottom: 8px;
+	padding-bottom: 8px;
    	display: block;
 }
 
