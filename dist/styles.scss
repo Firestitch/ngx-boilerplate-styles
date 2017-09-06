@@ -301,6 +301,8 @@ fs-heading fs-heading-subheading {
 
 md-dialog {
 
+	max-width: 1100px;
+
 	&:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-alert-modal) {
 
 		md-toolbar {
@@ -309,8 +311,8 @@ md-dialog {
 		}
 
 		.md-toolbar-tools {
-			height: 70px;
-			max-height: 70px;
+			height: 65px;
+			max-height: 65px;
 			padding: 0 20px;
 
 			h1, h2, h3 {
@@ -319,7 +321,11 @@ md-dialog {
 		}
 
 		.md-dialog-content {
-			padding: 0px 20px;
+			padding: 0 24px;
+		}
+
+		md-divider {
+			display: none;
 		}
 	}
 
@@ -327,8 +333,6 @@ md-dialog {
 	.md-toolbar-tools .sub {
 		font-size: 13px;
 	}
-
-	max-width: 1100px;
 }
 
 hr {
@@ -569,7 +573,6 @@ md-autocomplete-container {
 	md-autocomplete {
 
 		height: auto;
-		padding-left: 2px;
 
 		input:not(.md-input) {
 			padding: 0 2px;
@@ -700,13 +703,6 @@ md-input-container.md-input-has-value label {
     transition-duration: 0s !important;
 }
 
-
-
-
-
-
-
-
 md-chips-autocomplete-container {
 	.md-chips {
 		padding: 0;
@@ -745,23 +741,19 @@ md-chips-autocomplete-container {
 	}
 }
 
-
 @media screen and (max-width: 599px) {
-	md-dialog:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-alert-modal) {
-
-		.md-toolbar-tools {
-			font-size: 19px;
-	    	height: 50px;
-	    	max-height: 50px;
-	    	padding: 0 15px;
-	    }
-
-		.md-dialog-content {
-			padding: 0 15px;
-		}
-	}
-
 	md-dialog {
+
+		&:not(.fs-modal-prompt):not(.fs-modal-confirm):not(.fs-alert-modal) {
+			.md-toolbar-tools {
+		    	height: 50px;
+		    	max-height: 50px;
+		    }
+
+			.md-dialog-content {
+				padding: 0 15px;
+			}
+		}
 
 		md-dialog-actions {
 			flex: 1 0 auto;
